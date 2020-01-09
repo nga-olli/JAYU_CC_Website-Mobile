@@ -1,0 +1,26 @@
+.header {
+    padding: 10px 0;
+    border-bottom: 1px solid #dddddd94;
+    .row {
+        align-items: center;
+        -webkit-align-items: center;
+    }
+    .header-right {
+        @include display-flex();
+        justify-content: flex-end;
+        >div {
+            margin-left: 25px;
+        }
+        img {
+            width: 25px;
+        }
+    }
+    nav.main-menu {
+        width: 100%;
+        .menu-toggle {
+            opacity: 0;
+            height: 0;
+        }
+    }
+    
+}
