@@ -129,6 +129,20 @@ body .alink {
   width: 100%;
   display: inline-block; }
 
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #898989;
+  font-size: 15px !important; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #898989;
+  font-size: 15p !important x; }
+
+::placeholder {
+  color: #898989;
+  font-size: 15px !important; }
+
 input[type=checkbox],
 input[type=radio] {
   width: 1px;
@@ -645,13 +659,15 @@ ul.lost-history li {
 
 /* login page */
 .main-page-login {
-  max-width: 422px;
-  margin-bottom: 200px;
-  margin-top: 150px; }
+  margin-top: 60px;
+  max-width: 100%; }
   .main-page-login .page-title {
     text-align: center;
     font-size: 28px;
-    margin-bottom: 61px; }
+    margin-bottom: 61px;
+    width: 100%; }
+  .main-page-login .form .field .label-text {
+    opacity: 0.5; }
 
 .actions-toolbar .secondary {
   text-align: center;
@@ -659,7 +675,8 @@ ul.lost-history li {
   padding-top: 26px; }
 
 .form-login {
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  width: 100%; }
   .form-login .actions-toolbar {
     margin-bottom: 22px; }
   .form-login .bottom {
@@ -709,23 +726,21 @@ ul.lost-history li {
     background-color: transparent;
     border-color: #000; }
 
-.nav-login-page {
-  text-align: center; }
-  .nav-login-page ul.nav-tabs {
-    margin-bottom: 40px;
-    border-bottom: 0;
-    justify-content: center; }
-    .nav-login-page ul.nav-tabs .nav-link {
-      border: 0;
-      border-radius: 0;
-      color: #b8b8b8; }
-      .nav-login-page ul.nav-tabs .nav-link.active {
-        border-bottom: 0;
-        color: #000; }
-  .nav-login-page .tab-nav ul {
-    padding: 0; }
-    .nav-login-page .tab-nav ul li:last-child {
-      margin-right: 0; }
+.nav-login-page ul.nav-tabs {
+  margin-bottom: 40px;
+  border-bottom: 0;
+  justify-content: center; }
+  .nav-login-page ul.nav-tabs .nav-link {
+    border: 0;
+    border-radius: 0;
+    color: #b8b8b8; }
+    .nav-login-page ul.nav-tabs .nav-link.active {
+      border-bottom: 0;
+      color: #000; }
+.nav-login-page .tab-nav ul {
+  padding: 0; }
+  .nav-login-page .tab-nav ul li:last-child {
+    margin-right: 0; }
 
 /* end login page */
 .header {
@@ -1666,9 +1681,14 @@ select {
   margin-bottom: 20px; }
   .page-7-4 .row-3-column .col-sm-9, .page-sign-up .personal-information .row-3-column .col-sm-9 {
     display: flex;
-    padding-left: 10px; }
-    .page-7-4 .row-3-column .col-sm-9 .col-sm-4:first-child .form-control, .page-sign-up .personal-information .row-3-column .col-sm-9 .col-sm-4:first-child .form-control {
-      width: 95%; }
+    display: -webkit-flex;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between; }
+    .page-7-4 .row-3-column .col-sm-9 > div, .page-sign-up .personal-information .row-3-column .col-sm-9 > div {
+      width: 49%; }
+  .page-7-4 .row-3-column .col-sm-12, .page-sign-up .personal-information .row-3-column .col-sm-12 {
+    padding: 0 10px; }
 .page-7-4 fieldset.form-group .col-sm-6, .page-sign-up .personal-information fieldset.form-group .col-sm-6 {
   display: flex; }
   .page-7-4 fieldset.form-group .col-sm-6 .form-check:first-child, .page-sign-up .personal-information fieldset.form-group .col-sm-6 .form-check:first-child {
@@ -1684,6 +1704,8 @@ select {
   margin-left: 10px;
   padding: 0 33px;
   line-height: 36px; }
+  .page-7-4 .btn-gray.btn-black, .page-sign-up .personal-information .btn-gray.btn-black {
+    background-color: #000; }
 .page-7-4 .btn-submit, .page-sign-up .personal-information .btn-submit {
   text-align: center;
   margin-top: 80px; }
@@ -1691,13 +1713,19 @@ select {
     background-color: #2e2f32;
     border-radius: 0;
     color: #fff;
-    margin-left: 10px;
     padding: 0 33px;
-    line-height: 36px;
+    line-height: 50px;
     border-color: #2e2f32; }
     .page-7-4 .btn-submit button.btn:hover, .page-sign-up .personal-information .btn-submit button.btn:hover {
       background-color: #161617;
       border-color: #161617; }
+.page-7-4 .form-group.group-radio, .page-sign-up .personal-information .form-group.group-radio {
+  margin-bottom: 25px; }
+  .page-7-4 .form-group.group-radio .row, .page-sign-up .personal-information .form-group.group-radio .row {
+    display: inline-block;
+    width: 100%; }
+    .page-7-4 .form-group.group-radio .row legend, .page-sign-up .personal-information .form-group.group-radio .row legend {
+      font-size: 16px; }
 
 .contact-information {
   margin-bottom: 100px; }
@@ -1987,78 +2015,70 @@ select {
 .main-page-3-6 .desc-info p {
   font-weight: 300; }
 
-.main-page.change-password .form-login .note {
-  font-size: 14px;
-  border: 0;
-  padding: 0;
-  margin: 0;
+.main-page.change-password .change-to {
+  border: 1px solid #000;
+  padding: 12px;
   text-align: center; }
+.main-page.change-password .note {
+  margin-bottom: 20px; }
 
 .main-page.page-sign-up {
-  margin-bottom: 100px; }
-  .main-page.page-sign-up ul.nav {
+  margin-bottom: 100px;
+  margin-top: 60px; }
+  .main-page.page-sign-up .top {
     display: flex;
     display: -webkit-flex;
-    border-bottom: 0;
-    margin-bottom: 100px; }
-    .main-page.page-sign-up ul.nav li {
-      text-align: left;
-      width: 25%; }
-      .main-page.page-sign-up ul.nav li a {
-        color: #898989;
-        border: 0;
-        border-bottom: 1px solid #b8b8b8;
-        border-radius: 0;
-        margin-right: 5px;
-        padding-left: 0; }
-        .main-page.page-sign-up ul.nav li a.active, .main-page.page-sign-up ul.nav li a:hover {
-          color: #000;
-          border-color: #000; }
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    width: 100%; }
+    .main-page.page-sign-up .top .close-btn img {
+      width: 20px; }
   .main-page.page-sign-up .block-sign-up-info {
     margin-bottom: 50px; }
-    .main-page.page-sign-up .block-sign-up-info .info-top {
+    .main-page.page-sign-up .block-sign-up-info h4.title {
+      font-size: 18px;
+      margin-bottom: 30px; }
+    .main-page.page-sign-up .block-sign-up-info .group-check {
       display: flex;
       display: -webkit-flex;
-      display: flex;
-      display: -webkit-flex;
-      justify-content: space-between;
-      -webkit-justify-content: space-between;
-      margin-bottom: 50px; }
-      .main-page.page-sign-up .block-sign-up-info .info-top .group-check {
-        display: flex;
-        display: -webkit-flex; }
-      .main-page.page-sign-up .block-sign-up-info .info-top .form-btn .btn {
-        border: 1px solid #ddd;
-        border-radius: 0;
-        padding: 0 20px;
-        line-height: 35px; }
+      margin-top: 30px; }
+      .main-page.page-sign-up .block-sign-up-info .group-check .form-check {
+        padding-left: 0; }
+        .main-page.page-sign-up .block-sign-up-info .group-check .form-check:first-child {
+          width: 45%; }
     .main-page.page-sign-up .block-sign-up-info .info-sign-up-desc {
       background-color: #f7f8f8;
       padding: 20px;
       max-height: 242px;
       overflow: hidden;
-      overflow-y: scroll; }
-  .main-page.page-sign-up .condition-check {
-    display: flex;
-    display: -webkit-flex;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: space-between;
-    -webkit-justify-content: space-between; }
-    .main-page.page-sign-up .condition-check .group-check {
-      display: flex;
-      display: -webkit-flex; }
-  .main-page.page-sign-up .btn-group {
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    -webkit-justify-content: center;
-    width: 100%;
-    margin-top: 100px; }
-    .main-page.page-sign-up .btn-group button {
-      max-width: 100px;
+      overflow-y: scroll;
+      font-weight: 300; }
+    .main-page.page-sign-up .block-sign-up-info .form-btn .btn {
+      border: 1px solid #000;
       border-radius: 0;
-      margin: 0 15px; }
+      padding: 0 20px;
+      line-height: 50px;
+      width: 100%;
+      margin-bottom: 20px; }
+  .main-page.page-sign-up .condition-check .title {
+    margin: 20px 0; }
+  .main-page.page-sign-up .condition-check .group-check {
+    display: flex;
+    display: -webkit-flex; }
+    .main-page.page-sign-up .condition-check .group-check .form-check {
+      padding-left: 0; }
+      .main-page.page-sign-up .condition-check .group-check .form-check:first-child {
+        width: 45%; }
+  .main-page.page-sign-up .btn-group {
+    margin-top: 100px;
+    display: inline-block;
+    width: 100%; }
+    .main-page.page-sign-up .btn-group button {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 15px;
+      border-radius: 0;
+      line-height: 35px; }
       .main-page.page-sign-up .btn-group button.btn-case1 {
         background: #000;
         border: 1px solid #000; }
@@ -2072,10 +2092,17 @@ select {
           background: #b8b8b8;
           border-color: #b8b8b8; }
 
+.modal.show .modal-dialog {
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center; }
+
 #popup_privacy_policy .modal-dialog {
   max-width: 650px; }
 #popup_privacy_policy .modal-content {
-  border-radius: 0;
+  border-radius: 10px;
   max-height: 400px;
   overflow: hidden;
   overflow-y: scroll; }
@@ -2109,28 +2136,38 @@ select {
     background-color: #2d2d2d;
     color: #fff;
     text-align: center;
-    font-size: 1.25rem;
-    padding: 50px; }
+    font-size: 1rem;
+    line-height: 50px;
+    margin-bottom: 20px; }
     .confirmation-authen .inner.authentication {
       background-color: #331754; }
 
 .desc-confirm p {
   font-weight: 300; }
   .desc-confirm p.medium {
-    font-weight: 500; }
+    font-weight: 500;
+    margin: 30px 0; }
 
-.tab-confirmation h4.title {
-  margin-bottom: 100px; }
+.tab-confirmation h5.title {
+  margin-bottom: 30px;
+  font-weight: 400; }
 .tab-confirmation .confirmation-form {
   margin-bottom: 80px; }
   .tab-confirmation .confirmation-form .inner {
-    width: 56%;
+    width: 100%;
     margin: auto;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 50px 30px; }
-    .tab-confirmation .confirmation-form .inner input.form-control {
+    .tab-confirmation .confirmation-form .inner input {
       border-radius: 0; }
+    .tab-confirmation .confirmation-form .inner .input-group input.form-control {
+      border-radius: 0;
+      margin: 0.5px;
+      margin-bottom: 5px;
+      width: 13.5%; }
+      .tab-confirmation .confirmation-form .inner .input-group input.form-control.has-value {
+        border: 0; }
     .tab-confirmation .confirmation-form .inner .block-flex {
       display: flex;
       display: -webkit-flex;
@@ -2149,14 +2186,40 @@ select {
           margin: 0 4px;
           border-radius: 0; }
 
-.personal-information div.page-title {
-  font-size: 28px; }
+.btn-submit button {
+  border: 1px solid #000;
+  background-color: #000;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  border-radius: 0; }
+  .btn-submit button:hover {
+    border-color: #4d4d4d;
+    background-color: #4d4d4d;
+    color: #fff; }
+
+.personal-information label.col-form-label {
+  font-size: 18px;
+  margin-bottom: 10px; }
+.personal-information span.note {
+  font-weight: 300;
+  display: inline-block;
+  width: 100%;
+  font-size: 13px;
+  padding-left: 15px;
+  margin-top: 5px; }
+.personal-information .btn-gray {
+  width: 100%; }
 .personal-information .btn-cancel {
   text-align: right;
   position: relative;
   top: -35px; }
 .personal-information span.require {
   color: #d12e3a; }
+.personal-information .sub-title {
+  margin: 40px 0; }
 
 .modal#submitRegister .modal-dialog {
   max-width: 350px; }

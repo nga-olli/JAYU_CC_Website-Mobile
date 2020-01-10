@@ -622,13 +622,16 @@ ul.lost-history {
 }
 /* login page */
 .main-page-login{
-  max-width: 422px;
-  margin-bottom: 200px;
-  margin-top: 150px;
+  margin-top: 60px;
+  max-width: 100%;
   .page-title{
     text-align: center;
     font-size: 28px;
     margin-bottom: 61px;
+    width: 100%;
+  }
+  .form .field .label-text {
+    opacity: 0.5;
   }
 
 }
@@ -641,6 +644,7 @@ ul.lost-history {
 }
 .form-login{
   padding-bottom: 100px;
+  width: 100%;
   .actions-toolbar{
     margin-bottom: 22px;
   }
@@ -705,7 +709,6 @@ ul.lost-history {
 }
 
 .nav-login-page{
-  text-align: center;
   ul.nav-tabs {
     margin-bottom: 40px;
     border-bottom: 0;

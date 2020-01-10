@@ -583,11 +583,16 @@
     .row-3-column {
         margin-bottom: 20px;
         .col-sm-9 {
-            display: flex;
+            @include display-flex();
             padding-left: 10px;
-            .col-sm-4:first-child .form-control {
-                width: 95%;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            > div{
+                width: 49%;
             }
+        }
+        .col-sm-12 {
+            padding: 0 10px;
         }
     }
     fieldset.form-group .col-sm-6 {
@@ -609,6 +614,9 @@
         margin-left: 10px;
         padding: 0 33px;
         line-height: 36px;
+        &.btn-black {
+            background-color: $color-black;
+        }
     }
     .btn-submit {
         text-align: center;
@@ -617,9 +625,8 @@
             background-color: #2e2f32;
             border-radius: 0;
             color: #fff;
-            margin-left: 10px;
             padding: 0 33px;
-            line-height: 36px;
+            line-height: 50px;
             border-color: #2e2f32;
             &:hover {
                 background-color: darken(#2e2f32, 10%);
@@ -627,6 +634,17 @@
             }
         }
     }
+    .form-group.group-radio {
+        margin-bottom: 25px;
+        .row {
+            display: inline-block;
+            width: 100%;
+            legend {
+                font-size: 16px;
+            }
+        }
+    } 
+    
  }
 
  //Page 7-5

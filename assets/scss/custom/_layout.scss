@@ -100,9 +100,29 @@ body .alink{
   width: 100%;
   display: inline-block;
 }
+::-webkit-input-placeholder { /* Edge */
+  color: $color-gray-3;
+  font-size: 15px !important;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $color-gray-3;
+  font-size: 15p !importantx;
+}
+
+::placeholder {
+  color: $color-gray-3;
+  font-size: 15px !important;
+}
 @mixin display-flex() {
   display: flex;
   display: -webkit-flex;
+}
+@mixin display-flex-item-center() {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
 }
 @mixin display-flex-align-text-center() {
   align-items: center;
