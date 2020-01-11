@@ -1,4 +1,7 @@
 .main-page-1 {
+    .page-title {
+        margin-bottom: 0;
+    }
     margin-bottom: 100px;
 
     .inner-calendar {
@@ -96,10 +99,11 @@
             margin-bottom: 5px;
         }
     }
+    .regulation-info {
+        width: 100%;
+    }
     .inner-regulation-info {
-        border-top: 1px solid #000;
-        padding-top: 50px;
-        margin-top: 85px;
+        
         h5 {
             margin-bottom: 40px;
         }
@@ -111,9 +115,9 @@
                 width: 47%;
                 h5 {
                     margin-bottom: 20px;
+                    font-weight: 400;
                 }
                 ul {
-                    border-top: 1px solid #000;
                     li {
                         border-bottom: 1px solid $color-gray-3;
                         padding: 10px;
@@ -159,6 +163,12 @@
         color: $color-gray-10;
         border-radius: 0;
         margin-top: 20px;
+    }
+    &.page-number_98 {
+        .block-calendar-infor  {
+            display: inline-block;
+            width: 100%;
+        }
     }
 }
 #confirm_blooking .modal-content {

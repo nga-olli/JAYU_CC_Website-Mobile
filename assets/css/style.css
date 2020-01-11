@@ -1150,6 +1150,174 @@ select {
 .form.form-edit-person .button.action.continue {
   width: 150px; }
 
+.main-page-1 {
+  margin-bottom: 100px; }
+  .main-page-1 .page-title {
+    margin-bottom: 0; }
+  .main-page-1 .inner-calendar {
+    position: relative;
+    overflow: hidden; }
+  .main-page-1 .calendar__current {
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+    display: flex;
+    display: -webkit-flex;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+    margin-bottom: 50px; }
+    .main-page-1 .calendar__current h2 {
+      margin: 0; }
+    .main-page-1 .calendar__current .arrow-block a {
+      font-size: 30px;
+      margin-left: 5px; }
+  .main-page-1 .calendar__date {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap; }
+  .main-page-1 .calendar__day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    font-weight: 600;
+    color: #262626;
+    width: 14%;
+    margin-bottom: 12px; }
+    .main-page-1 .calendar__day span {
+      width: 100%; }
+    .main-page-1 .calendar__day:first-child {
+      color: #ff685d; }
+  .main-page-1 .calendar__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    text-align: center;
+    padding: 10px 0;
+    color: #262626;
+    width: 14%; }
+    .main-page-1 .calendar__number span {
+      width: 100%; }
+      .main-page-1 .calendar__number span:first-child {
+        font-size: 25px; }
+      .main-page-1 .calendar__number span:last-child {
+        font-size: 14px; }
+    .main-page-1 .calendar__number.marked {
+      color: #ff685d; }
+    .main-page-1 .calendar__number.passed {
+      opacity: 0.5;
+      pointer-events: none; }
+      .main-page-1 .calendar__number.passed.current {
+        border: 1px solid #ddd; }
+    .main-page-1 .calendar__number--current, .main-page-1 .calendar__number:hover {
+      background-color: #000;
+      color: #bea36b;
+      font-weight: 700;
+      cursor: pointer; }
+  .main-page-1 .info-booking {
+    margin-top: 100px; }
+    .main-page-1 .info-booking h5.title {
+      margin-bottom: 20px; }
+    .main-page-1 .info-booking p {
+      margin-bottom: 5px; }
+  .main-page-1 .regulation-info {
+    width: 100%; }
+  .main-page-1 .inner-regulation-info h5 {
+    margin-bottom: 40px; }
+  .main-page-1 .inner-regulation-info.info-booking-detail {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
+    .main-page-1 .inner-regulation-info.info-booking-detail .info-in-out {
+      width: 47%; }
+      .main-page-1 .inner-regulation-info.info-booking-detail .info-in-out h5 {
+        margin-bottom: 20px;
+        font-weight: 400; }
+      .main-page-1 .inner-regulation-info.info-booking-detail .info-in-out ul li {
+        border-bottom: 1px solid #898989;
+        padding: 10px;
+        display: flex;
+        display: -webkit-flex;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        font-size: 16px; }
+        .main-page-1 .inner-regulation-info.info-booking-detail .info-in-out ul li.active {
+          border: 1px solid #bea36b;
+          margin-top: -1px; }
+  .main-page-1 .info-confirm {
+    margin-top: 150px; }
+    .main-page-1 .info-confirm p {
+      margin-bottom: 5px; }
+      .main-page-1 .info-confirm p.phone-number {
+        display: inline-block;
+        border: 1px solid #ddd;
+        padding: 5px 10px; }
+    .main-page-1 .info-confirm .btn-confirm {
+      margin-top: 10px; }
+      .main-page-1 .info-confirm .btn-confirm button {
+        display: inline-block;
+        background: #000;
+        color: #bea36b;
+        border-radius: 0; }
+        .main-page-1 .info-confirm .btn-confirm button:hover {
+          background: #1a1a1a; }
+  .main-page-1 .booking-form button {
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    color: #bea36b;
+    border-radius: 0;
+    margin-top: 20px; }
+  .main-page-1.page-number_98 .block-calendar-infor {
+    display: inline-block;
+    width: 100%; }
+
+#confirm_blooking .modal-content {
+  width: 332px; }
+  #confirm_blooking .modal-content .modal-body {
+    padding: 50px; }
+  #confirm_blooking .modal-content a:hover {
+    color: #bea36b; }
+
+#confirm_blooking2 .modal-dialog {
+  max-width: 700px; }
+  #confirm_blooking2 .modal-dialog .modal-content {
+    border-radius: 0; }
+    #confirm_blooking2 .modal-dialog .modal-content .modal-body {
+      display: flex;
+      display: -webkit-flex;
+      padding: 0; }
+      #confirm_blooking2 .modal-dialog .modal-content .modal-body > div {
+        width: 50%;
+        padding: 50px; }
+      #confirm_blooking2 .modal-dialog .modal-content .modal-body .phone-number {
+        display: inline-block;
+        border: 1px solid #ddd;
+        padding: 5px 10px; }
+      #confirm_blooking2 .modal-dialog .modal-content .modal-body .block-right {
+        background: #f2f2f2; }
+      #confirm_blooking2 .modal-dialog .modal-content .modal-body .modal-footer {
+        justify-content: space-between;
+        border: 0;
+        border-radius: 0;
+        padding: 0; }
+        #confirm_blooking2 .modal-dialog .modal-content .modal-body .modal-footer button {
+          padding: 0;
+          text-align: left; }
+
 .main-page-2 .page-title {
   margin-bottom: 35px; }
 .main-page-2 .block-top-content {
