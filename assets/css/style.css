@@ -658,8 +658,10 @@ ul.lost-history li {
     margin-bottom: 10px; }
 
 /* login page */
+.main-page {
+  margin-top: 60px; }
+
 .main-page-login {
-  margin-top: 60px;
   max-width: 100%; }
   .main-page-login .page-title {
     text-align: center;
@@ -1778,7 +1780,8 @@ select {
       margin-bottom: 8px; }
 
 .main-page-4 .courses-desc {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 40px; }
   .main-page-4 .courses-desc .btn-download {
     display: inline-flex;
     align-items: center;
@@ -1849,8 +1852,12 @@ select {
       background-color: #e40e4e;
       border-color: #e40e4e; }
 
+.main-page-4 .courses-content {
+  width: 100%; }
+
 .block-hold {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  width: 100%; }
   .block-hold .block-hold-top {
     display: flex;
     width: 100%;
@@ -1865,9 +1872,12 @@ select {
   .block-hold .block-hold-info {
     display: flex;
     margin-top: 30px; }
+    .block-hold .block-hold-info ul {
+      margin-bottom: 30px; }
     .block-hold .block-hold-info ul li {
       position: relative;
-      padding-left: 15px; }
+      padding-left: 15px;
+      margin-bottom: 15px; }
       .block-hold .block-hold-info ul li span {
         float: right; }
       .block-hold .block-hold-info ul li:before {
@@ -1894,34 +1904,32 @@ select {
         background-color: #e40e4e !important; }
   .block-hold .block-hold-thumbnail {
     margin-top: 30px; }
-    .block-hold .block-hold-thumbnail ul {
-      display: flex; }
-      .block-hold .block-hold-thumbnail ul li {
-        margin: 0 3px;
-        position: relative; }
-        .block-hold .block-hold-thumbnail ul li .hover {
-          position: absolute;
+    .block-hold .block-hold-thumbnail ul li {
+      margin: 0 3px;
+      position: relative; }
+      .block-hold .block-hold-thumbnail ul li .hover {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #00000091;
+        opacity: 0; }
+        .block-hold .block-hold-thumbnail ul li .hover:before {
+          content: '';
+          background: url(../images/page-4/icon-zoom.png) no-repeat;
+          background-position: center center;
+          height: 33px;
+          display: inline-block;
+          background-size: contain;
           left: 0;
-          right: 0;
           top: 0;
+          right: 0;
           bottom: 0;
-          background-color: #00000091;
-          opacity: 0; }
-          .block-hold .block-hold-thumbnail ul li .hover:before {
-            content: '';
-            background: url(../images/page-4/icon-zoom.png) no-repeat;
-            background-position: center center;
-            height: 33px;
-            display: inline-block;
-            background-size: contain;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            position: absolute; }
-        .block-hold .block-hold-thumbnail ul li.active .hover, .block-hold .block-hold-thumbnail ul li:hover .hover {
-          opacity: 1; }
+          margin: auto;
+          position: absolute; }
+      .block-hold .block-hold-thumbnail ul li.active .hover, .block-hold .block-hold-thumbnail ul li:hover .hover {
+        opacity: 1; }
 
 .main-page-3 {
   margin-bottom: 100px; }

@@ -104,7 +104,17 @@
     $('#popup_terms').modal({ show: true });
 
     //Popup galary
-    $('.popup-gallery').each(function () {
+
+    $('.popup-gallery').each(function() {
+        $(this).slick({
+            autoplay: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: false,
+            dots: false,
+            infinite: true
+        });
         $(this).magnificPopup({
             delegate: 'a',
             type: 'image',
@@ -123,6 +133,7 @@
             }
         });
     });
+    
     $(".btn-click").click(function () {
         $(this).toggleClass('active');
         console.log('2545');

@@ -1,5 +1,12 @@
+.main-page-4 {
+    //overflow: hidden;
+    .courses-content {
+        width: 100%;
+    }
+}
 .block-hold {
     margin-bottom: 100px;
+    width: 100%;
     .block-hold-top {
         display: flex;
         width: 100%;
@@ -17,9 +24,13 @@
     .block-hold-info {
         display: flex;
         margin-top: 30px;
+        ul {
+            margin-bottom: 30px;
+        }
         ul li {
             position: relative;
             padding-left: 15px;
+            margin-bottom: 15px;
             span {
                 float: right;
             }
@@ -57,7 +68,6 @@
     .block-hold-thumbnail {
         margin-top: 30px;
         ul {
-            display: flex;
             li {
                 margin: 0 3px;
                 position: relative;   
