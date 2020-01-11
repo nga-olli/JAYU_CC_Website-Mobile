@@ -58,16 +58,16 @@
         flex-flow: row wrap;
         -webkit-flex-flow: row wrap;
         text-align: center;
-        padding: 10px 0;
+        padding: 5px 0;
         color: #262626;
         width: 14%;
         span {
             width: 100%;
             &:first-child {
-                font-size: 25px;
+                font-size: 18px;
             }
             &:last-child {
-                font-size: 14px;
+                font-size: 9px;
             }
         }
     
@@ -156,14 +156,29 @@
             }
         }
     }
-    .booking-form button {
-        display: inline-block;
-        background: transparent;
-        border: 0;
-        color: $color-gray-10;
-        border-radius: 0;
-        margin-top: 20px;
+    .booking-form {
+        border-top: 1px solid #000;
+        margin-top: 30px;
+        padding-top: 30px;
+        .form-group.row {
+            flex-flow: wrap row;
+            >div {
+                width: 50%;
+            }
+        }
+        .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
+            font-size: 13px;
+        }
+        button {
+            display: inline-block;
+            background: transparent;
+            border: 0;
+            color: $color-gray-10;
+            border-radius: 0;
+            margin-top: 20px;
+        }
     }
+    
     &.page-number_98 {
         .block-calendar-infor  {
             display: inline-block;
@@ -171,6 +186,7 @@
         }
     }
 }
+
 #confirm_blooking .modal-content {
     width: 332px;
     .modal-body {
@@ -183,18 +199,13 @@
 #confirm_blooking2 .modal-dialog {
     max-width: 700px;
     .modal-content {
-        border-radius: 0;
         .modal-body {
-            @include display-flex();
-            padding: 0;
-            >div {
-                width: 50%;
-                padding: 50px;
-            }
+            padding: 50px;
             .phone-number {
                 display: inline-block;
                 border: 1px solid #ddd;
                 padding: 5px 10px;
+                width: 100%;
             }
             .block-right {
                 background: #f2f2f2;
@@ -212,5 +223,89 @@
         }
     }
 }
+#confirm_reservation {
+    .modal-body {
+        max-height: 90vh;
+        overflow-y: scroll;
+        padding: 30px;
+        .title {
+            margin-bottom: 30px;
+        }
+    }
+    .reser_info {
+        @include display-flex-between;
+        flex-flow: wrap row;
+        font-size: 15px;
+        margin-bottom: 30px;
+        >div {
+            width: 49%;
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .mobile-number {
+        font-size: 15px;
+        .phone {
+            border: 1px solid #ddd;
+            padding: 15px 20px;
+        }
+    }
+    .check-booking {
+        margin-top: 40px;
+        .check-radio {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 5px;
+            cursor: pointer;
+            &:before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                border: 1px solid #ddd;
+                border-radius: 50%;
+                position: absolute;
+                right: -26px;
+                top: 4px;
+                cursor: pointer;
 
+            }
+            &.active:before {
+                content: '\f058';
+                font-family: FontAwesome;
+                border: 0;
+                font-size: 20px;
+                top: 0;
+            }
+        }
+        .warning {
+            font-size: 15px;
+        }
+    }
+    .input-information {
+        .col-form-label {
+            width: 100%;
+        }
+        .form-input {
+            width: 100%;
+            input {
+                border-radius: 0;
+            }
+        }
+        
+    }
+    .note-info {
+        margin-top: 30px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .btn-confirm {
+        width: 100%;
+        background: #000;
+        color: #fff;
+        padding: 15px;
+        border: 0;
+        margin-top: 20px;
+    }
+}
 

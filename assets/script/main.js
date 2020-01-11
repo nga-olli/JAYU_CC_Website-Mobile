@@ -79,13 +79,25 @@
                 $(this).next('.hidden_slide').slideDown();
                 $(this).children('.right').css({'transform':'rotate(180deg)'});
             }
-        }); $('.select-brand').click(function(){
+        }); 
+        
+        $('.select-brand').click(function(){
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
                 $('.our-brands').slideUp();
             } else {
                 $(this).addClass('active');
                 $('.our-brands').slideDown();
+            }
+        });
+
+        $('.check-radio').click(function(){
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $('.check-booking .warning, .input-information').slideUp();
+            } else {
+                $(this).addClass('active');
+                $('.check-booking .warning, .input-information').slideDown();
             }
         });
     });

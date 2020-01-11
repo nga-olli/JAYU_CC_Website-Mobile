@@ -259,9 +259,6 @@ body {
   font-size: 18px;
   color: #000; }
 
-p {
-  margin-bottom: 35px; }
-
 .banner-homepage {
   position: relative; }
   .banner-homepage .banner-content {
@@ -1200,15 +1197,15 @@ select {
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
     color: #262626;
     width: 14%; }
     .main-page-1 .calendar__number span {
       width: 100%; }
       .main-page-1 .calendar__number span:first-child {
-        font-size: 25px; }
+        font-size: 18px; }
       .main-page-1 .calendar__number span:last-child {
-        font-size: 14px; }
+        font-size: 9px; }
     .main-page-1 .calendar__number.marked {
       color: #ff685d; }
     .main-page-1 .calendar__number.passed {
@@ -1274,13 +1271,23 @@ select {
         border-radius: 0; }
         .main-page-1 .info-confirm .btn-confirm button:hover {
           background: #1a1a1a; }
-  .main-page-1 .booking-form button {
-    display: inline-block;
-    background: transparent;
-    border: 0;
-    color: #bea36b;
-    border-radius: 0;
-    margin-top: 20px; }
+  .main-page-1 .booking-form {
+    border-top: 1px solid #000;
+    margin-top: 30px;
+    padding-top: 30px; }
+    .main-page-1 .booking-form .form-group.row {
+      flex-flow: wrap row; }
+      .main-page-1 .booking-form .form-group.row > div {
+        width: 50%; }
+    .main-page-1 .booking-form .rs-select2 .select2-container .select2-selection--single .select2-selection__rendered {
+      font-size: 13px; }
+    .main-page-1 .booking-form button {
+      display: inline-block;
+      background: transparent;
+      border: 0;
+      color: #bea36b;
+      border-radius: 0;
+      margin-top: 20px; }
   .main-page-1.page-number_98 .block-calendar-infor {
     display: inline-block;
     width: 100%; }
@@ -1294,29 +1301,89 @@ select {
 
 #confirm_blooking2 .modal-dialog {
   max-width: 700px; }
-  #confirm_blooking2 .modal-dialog .modal-content {
-    border-radius: 0; }
-    #confirm_blooking2 .modal-dialog .modal-content .modal-body {
-      display: flex;
-      display: -webkit-flex;
+  #confirm_blooking2 .modal-dialog .modal-content .modal-body {
+    padding: 50px; }
+    #confirm_blooking2 .modal-dialog .modal-content .modal-body .phone-number {
+      display: inline-block;
+      border: 1px solid #ddd;
+      padding: 5px 10px;
+      width: 100%; }
+    #confirm_blooking2 .modal-dialog .modal-content .modal-body .block-right {
+      background: #f2f2f2; }
+    #confirm_blooking2 .modal-dialog .modal-content .modal-body .modal-footer {
+      justify-content: space-between;
+      border: 0;
+      border-radius: 0;
       padding: 0; }
-      #confirm_blooking2 .modal-dialog .modal-content .modal-body > div {
-        width: 50%;
-        padding: 50px; }
-      #confirm_blooking2 .modal-dialog .modal-content .modal-body .phone-number {
-        display: inline-block;
-        border: 1px solid #ddd;
-        padding: 5px 10px; }
-      #confirm_blooking2 .modal-dialog .modal-content .modal-body .block-right {
-        background: #f2f2f2; }
-      #confirm_blooking2 .modal-dialog .modal-content .modal-body .modal-footer {
-        justify-content: space-between;
-        border: 0;
-        border-radius: 0;
-        padding: 0; }
-        #confirm_blooking2 .modal-dialog .modal-content .modal-body .modal-footer button {
-          padding: 0;
-          text-align: left; }
+      #confirm_blooking2 .modal-dialog .modal-content .modal-body .modal-footer button {
+        padding: 0;
+        text-align: left; }
+
+#confirm_reservation .modal-body {
+  max-height: 90vh;
+  overflow-y: scroll;
+  padding: 30px; }
+  #confirm_reservation .modal-body .title {
+    margin-bottom: 30px; }
+#confirm_reservation .reser_info {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  flex-flow: wrap row;
+  font-size: 15px;
+  margin-bottom: 30px; }
+  #confirm_reservation .reser_info > div {
+    width: 49%; }
+    #confirm_reservation .reser_info > div p {
+      margin-bottom: 10px; }
+#confirm_reservation .mobile-number {
+  font-size: 15px; }
+  #confirm_reservation .mobile-number .phone {
+    border: 1px solid #ddd;
+    padding: 15px 20px; }
+#confirm_reservation .check-booking {
+  margin-top: 40px; }
+  #confirm_reservation .check-booking .check-radio {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+    cursor: pointer; }
+    #confirm_reservation .check-booking .check-radio:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      position: absolute;
+      right: -26px;
+      top: 4px;
+      cursor: pointer; }
+    #confirm_reservation .check-booking .check-radio.active:before {
+      content: '\f058';
+      font-family: FontAwesome;
+      border: 0;
+      font-size: 20px;
+      top: 0; }
+  #confirm_reservation .check-booking .warning {
+    font-size: 15px; }
+#confirm_reservation .input-information .col-form-label {
+  width: 100%; }
+#confirm_reservation .input-information .form-input {
+  width: 100%; }
+  #confirm_reservation .input-information .form-input input {
+    border-radius: 0; }
+#confirm_reservation .note-info {
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 300; }
+#confirm_reservation .btn-confirm {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  border: 0;
+  margin-top: 20px; }
 
 .main-page-2 .page-title {
   margin-bottom: 35px; }
