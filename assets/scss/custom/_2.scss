@@ -1,8 +1,14 @@
 .main-page-2 {
+    .page-title {
+        margin-bottom: 35px;
+    }
     .block-top-content {
         margin-bottom: 50px;
         .block-left {
             font-size: 25px;
+            width: 100%;
+            @include display-flex-between();
+            margin-bottom: 10px;
             i.fa {
                 font-size: 30px;
                 &.fa-angle-left {
@@ -16,10 +22,19 @@
                 display: inline;
                 margin-left: 15px;
                 color: $color-gray-3;
-                &:first-child {
+                font-size: 15px;
+                &.active {
                     color: $color-black;
+                    margin-left: 0;
                 }
             }
+        }
+    }
+    &.main-page-2_101 {
+        .block-top-content {
+            border-bottom: 1px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
     }
     .block-item-list {
@@ -35,6 +50,8 @@
         }
         .number-title {
             margin-right: 20px;
+            width: 100%;
+            margin-bottom: 20px
         }
         .image {
             margin-bottom: 15px;
@@ -59,16 +76,26 @@
                 opacity: 1;
             }
         }
-        .item-info p {
-            margin-bottom: 0;
-        }
+        .item-info {
+            font-weight: 300;
+            p {
+                margin-bottom: 0;
+            }
+        } 
         .item-notice {
-            margin-bottom: 50px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            position: relative;
+            font-weight: 300;
             p {
                 margin-bottom: 5px;
                 &.small {
                     font-weight: 300;
                     font-size: 80%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                 }
             }
             .read-more {
@@ -107,6 +134,7 @@
     }
     .fee-information {
         margin-bottom: 100px;
+        width: 100%;
         .table thead th {
             border-bottom: 1px solid #ddd;
             border-top: 1px solid #000;
@@ -114,6 +142,7 @@
         }
         .table tr td {
             text-align: center;
+            white-space: nowrap;
             span {
                 margin-right: 20px;
             }

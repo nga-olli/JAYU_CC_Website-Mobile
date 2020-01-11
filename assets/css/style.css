@@ -1150,10 +1150,18 @@ select {
 .form.form-edit-person .button.action.continue {
   width: 150px; }
 
+.main-page-2 .page-title {
+  margin-bottom: 35px; }
 .main-page-2 .block-top-content {
   margin-bottom: 50px; }
   .main-page-2 .block-top-content .block-left {
-    font-size: 25px; }
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    margin-bottom: 10px; }
     .main-page-2 .block-top-content .block-left i.fa {
       font-size: 30px; }
       .main-page-2 .block-top-content .block-left i.fa.fa-angle-left {
@@ -1163,9 +1171,15 @@ select {
     .main-page-2 .block-top-content .block-right ul li {
       display: inline;
       margin-left: 15px;
-      color: #898989; }
-      .main-page-2 .block-top-content .block-right ul li:first-child {
-        color: #000; }
+      color: #898989;
+      font-size: 15px; }
+      .main-page-2 .block-top-content .block-right ul li.active {
+        color: #000;
+        margin-left: 0; }
+.main-page-2.main-page-2_101 .block-top-content {
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  margin-bottom: 20px; }
 .main-page-2 .block-item-list {
   display: flex;
   display: -webkit-flex;
@@ -1177,7 +1191,9 @@ select {
       opacity: 0.5;
       pointer-events: none; }
   .main-page-2 .block-item-list .number-title {
-    margin-right: 20px; }
+    margin-right: 20px;
+    width: 100%;
+    margin-bottom: 20px; }
   .main-page-2 .block-item-list .image {
     margin-bottom: 15px;
     position: relative; }
@@ -1201,15 +1217,24 @@ select {
         color: #bea36b; }
     .main-page-2 .block-item-list .image:hover .view-more {
       opacity: 1; }
-  .main-page-2 .block-item-list .item-info p {
-    margin-bottom: 0; }
+  .main-page-2 .block-item-list .item-info {
+    font-weight: 300; }
+    .main-page-2 .block-item-list .item-info p {
+      margin-bottom: 0; }
   .main-page-2 .block-item-list .item-notice {
-    margin-bottom: 50px; }
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    position: relative;
+    font-weight: 300; }
     .main-page-2 .block-item-list .item-notice p {
       margin-bottom: 5px; }
       .main-page-2 .block-item-list .item-notice p.small {
         font-weight: 300;
-        font-size: 80%; }
+        font-size: 80%;
+        position: absolute;
+        top: 0;
+        right: 0; }
     .main-page-2 .block-item-list .item-notice .read-more {
       color: #898989;
       font-size: 25px;
@@ -1236,13 +1261,15 @@ select {
     .main-page-2 .article-detail .pagination > div {
       margin-right: 20px; }
 .main-page-2 .fee-information {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  width: 100%; }
   .main-page-2 .fee-information .table thead th {
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #000;
     text-align: center; }
   .main-page-2 .fee-information .table tr td {
-    text-align: center; }
+    text-align: center;
+    white-space: nowrap; }
     .main-page-2 .fee-information .table tr td span {
       margin-right: 20px; }
 .main-page-2 p.note {
