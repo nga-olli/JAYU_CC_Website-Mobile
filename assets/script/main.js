@@ -183,6 +183,16 @@
         infinite: true
     });
 
+    $('.news-specical').slick({
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: false,
+        dots: false,
+        infinite: true
+    });
+
 
 
 })(jQuery);
