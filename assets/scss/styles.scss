@@ -95,6 +95,14 @@ body{
 }
 .banner-homepage{
   position: relative;
+  overflow: hidden;
+  .box-outer img.banner-img  {
+    display: block;
+    height: 80vh;
+    min-width: 100%;
+    width: auto;
+    max-width: none;
+}
   .banner-content{
     position: absolute;
     top: 200px;
@@ -122,9 +130,9 @@ body{
 
 .block-title{
   text-align: center;
-  font-size: 46px;
+  font-size: 30px;
   font-weight: 400;
-  margin: 0 0 87px;
+  margin: 0 0 40px;
 }
 .block-list{
   margin: 0 -17px;
@@ -217,7 +225,7 @@ body{
   .box-title{
     font-weight: 400;
     font-size: 18px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   .date{
     font-size: 12px;
@@ -232,7 +240,6 @@ body{
 }
 
 .block-promo{
-  margin: 115px 0 0;
   .box-link,
   img{
     display: block;
@@ -246,17 +253,22 @@ body{
     -webkit-hyphens: auto;
     display: block;
     hyphens: auto;
-    word-wrap: break-word;
-    max-height: 95px;
-    height: 95px;
     padding-right: 10px;
     overflow: hidden;
+    margin-bottom: 10px;
   }
 }
+.wrapper {
+  width: 100%;
+}
+.block-promo .block-list .block-item {
+  margin-bottom: 40px;
+}
+
 .more-text{
   color: $color-gray;
   font-size: 18px;
-  margin: 67px 0;
+  margin: 0 0 67px 0;
   display: inline-block;
   border-bottom: 1px solid $color-gray;
   padding-bottom: 4px;
@@ -266,10 +278,14 @@ body{
   margin-bottom: 98px;
 }
 .block-notice{
+  .block-inner {
+    margin-bottom: 40px;
+  }
   .box-title{
     span{
       display: block;
       line-height: 30px;
+      font-size: 16px;
     }
   }
 }
@@ -280,39 +296,7 @@ body{
   background: $color-line ;
   margin: 0 0 48px;
 }
-.block-contact{
-  margin-bottom: 60px;
-  .box-top{
-    margin-bottom: 20px;
 
-    span{
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .icon{
-      width: 80px;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-    .text{
-      font-weight: 500;
-      font-size: 18px;
-    }
-    
-  }
-  .desc{
-    font-size: 18px;
-    p{
-      margin-bottom: 0px;
-    }
-    .small{
-      font-size: 12px;
-    }
-    .call {
-      margin-top: 20px;
-    }
-  }
-}
 .block-promo-2{
   margin-bottom: 50px;
 }
@@ -329,34 +313,23 @@ body{
     display: table;
     clear: both;
   }
-  .menu-rule{
-   ul >li{
-      display: inline-block;
-     margin-right: 20px;
-     a{
-       font-size: 16px;
-     }
+    .menu-rule{
+        ul{
+            @include display-flex();
+            >li{
+                display: inline-block;
+                margin-right: 10px;
+                a{
+                    font-size: 11px;
+                    white-space: nowrap;
+                }
+            }
+        }
+        
     }
-  }
 }
 
-footer{
-  .inner{
-    font-size: 12px;
-    font-weight: 300;
-    ul li{
-      display: inline-block;
-      margin-right: 10px;
-    }
-    ul li,
-    ul li a{
-      color: $color-black;
-    }
-    .block{
-        margin-bottom: 12px;
-    }
-  }
-}
+
 
 .contact-desc{
   margin-bottom: 71px;
@@ -745,3 +718,4 @@ ul.lost-history {
 @import "custom/_3";
 @import "custom/_6";
 @import "custom/_9";
+@import "custom/_footer";

@@ -164,6 +164,25 @@
     });
     $("#respMenu").aceResponsiveMenu();
 
+    $('.block-promo .block-list-inner').slick({
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        dots: false,
+        infinite: true
+    });
+    $('.block-notice .block-list-inner').slick({
+        autoplay: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        dots: false,
+        infinite: true
+    });
+
 
 
 })(jQuery);
