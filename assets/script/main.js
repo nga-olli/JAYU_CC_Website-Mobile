@@ -159,7 +159,22 @@
             width: "toggle"
         });
     });
+    $(".search-in-menu .icon-search").click(function () {
+        $(this).toggleClass('active');
+        $(".search-in-menu .block-search").animate({
+            width: "toggle"
+        });
+    });
     $(".icon-menu").click(function () {
+        $('.main-menu').animate({
+            width: "toggle"
+        })
+        $('#menu-btn').click();
+    });
+    $(".close-menu").click(function () {
+        $('.main-menu').animate({
+            width: "toggle"
+        })
         $('#menu-btn').click();
     });
     $("#respMenu").aceResponsiveMenu();

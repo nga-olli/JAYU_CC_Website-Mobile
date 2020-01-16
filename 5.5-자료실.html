@@ -31,7 +31,32 @@
                     </div>
                     
                 </div>
-                <nav class="main-menu">
+                <nav class="main-menu" style="display: none;">
+                    <div class="inner-main-menu">
+                        <div class="top-menu">
+                            <div class="logo"><h1>
+                                <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                            </h1></div>
+                            <div class="close-menu">
+                                <img src="assets/images/icon-close.png" >
+                            </div>
+                        </div>
+                        <div class="middle-block">
+                            <div class="search-in-menu">
+                                <div class="icon-search">
+                                    <img src="assets/images/icon-search.png" >
+                                    <span class="on-search hidden">취소</span>
+                                </div>
+                                <form class="block-search" style="display: none;">
+                                    <input type="text" placeholder="검색어를 입력해 주세요.">
+                                    <button type="button"><img src="assets/images/icon-search.png" ></button>
+                                </form>
+                            </div>
+                            <div class="welcome">
+                                <h5 class="text-yellow">강도식님<br /> 환영합니다.</h5>
+                                <a href="#" class="logout">로그아웃 <img src="assets/images/icon-logout.png"></a>
+                            </div>
+                        </div>
                         <!-- Menu Toggle btn-->
                     <div class="menu-toggle">
                         <button type="button" id="menu-btn">
@@ -42,135 +67,56 @@
                     
                     <ul  id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
                         <li>
-                            <a href="#">예약서비스</a>
+                            <a href="javascript:;">예약서비스</a>
+                            <ul>
+                                <li><a href="#">실시간예약</a></li>
+                                <li><a href="#">주말예약</a></li>
+                                <li><a href="#">대기예약</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="javascript:;">뉴스&이벤트</a>
                             <ul>
-                                <li >
-                                    <ul>
-                                        <li>
-                                            <a href="#">강도식님</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">환영합니다.</a>
-                                        </li>
-                                        <li class="logout">
-                                            <a href="#">로그아웃</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul>
-                                        <li>
-                                            <a href="#">실시간 예약</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">주말 예약</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">대기 예약</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul>
-                                        <li>
-                                            <a href="#">세일&프로모션</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">공지사항</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">예약이용안내</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">이용요금안내션</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">홈페이지 이용안내</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">레스토랑 이용안내</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul>
-                                        <li>
-                                            <a href="#">클럽개요</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">인사말</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">경영테마</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                주요시설
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                입회안내
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                오시는길
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul>
-                                        <li>
-                                            <a href="#">전체코스소개</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">OUT코스</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">IN코스</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul>
-                                        <li>
-                                            <a href="#">주요연락처</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">분실물센터</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">명예의전당</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">날씨정보</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">자료실</a>
-                                        </li>
-                                        <li>
-                                            <a href="5.6-통합FAQ.html">통합FAQ</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li><a href="#">세일&프로모션</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">예약이용안내</a></li>
+                                <li><a href="#">이용요금안내</a></li>
+                                <li><a href="#">홈페이지 이용안내</a></li>
+                                <li><a href="#">레스토랑 이용안내</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">클럽소개</a>
-        
+                            <a href="javascript:;">클럽소개</a>
+                            <ul>
+                                <li><a href="#">클럽개요</a></li>
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">경영테마</a></li>
+                                <li><a href="#">주요시설</a></li>
+                                <li><a href="#">입회안내</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="#">코스안내  </a>
+                            <a href="javascript:;">코스안내</a>
+                            <ul>
+                                <li><a href="#">전체코스소개</a></li>
+                                <li><a href="#">OUT코스</a></li>
+                                <li><a href="#">IN코스</a></li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="#">고객센터</a>
-                        </li>
+                            <a href="javascript:;">고객센터</a>
+                            <ul>
+                                <li><a href="#">주요연락처</a></li>
+                                <li><a href="#">분실물센터</a></li>
+                                <li><a href="#">명예의전당</a></li>
+                                <li><a href="#">날씨정보</a></li>
+                                <li><a href="#">자료실</a></li>
+                                <li><a href="#">통합FAQ</a></li>
+                            </ul>
                     </ul>
+                    </div>
+                    
                 </nav>
             </div>
         </div>
