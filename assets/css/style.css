@@ -2516,7 +2516,8 @@ select {
   margin-bottom: 30px;
   margin-top: 20px; }
   .main-page-3-5 .block-require .info-require .col-sm-6 {
-    display: flex; }
+    display: flex;
+    margin-bottom: 30px; }
     .main-page-3-5 .block-require .info-require .col-sm-6 .inner {
       background-color: #f4f4f4;
       padding: 30px;
